@@ -8,6 +8,7 @@ defmodule Rostex.Accounts.User do
     field :display_name, :string
     field :email, :string
     field :password, :string
+    many_to_many :organisations, Rostex.Organisations.Organisation, join_through: Rostex.Organisations.OrganisationUser
 
     timestamps()
   end
